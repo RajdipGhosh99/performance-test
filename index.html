@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Tabs</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="A fun page to open multiple tabs with a single click. Easily open multiple Google search tabs.">
+    <meta name="keywords"
+        content="open tabs, multiple tabs, Google search, tab opener, browser tabs, open multiple tabs at once, Google tab opener, fun browser tool, bulk tab opener, instant tab opening, open tabs in bulk">
+    <meta name="author" content="Rajdip Ghosh">
+    <meta property="og:title" content="Open Tabs - Fun Tab Opener Tool">
+    <meta property="og:description"
+        content="A simple tool that allows you to open multiple tabs in one click. Try it now!">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/28029253/pexels-photo-28029253/free-photo-of-a-bird-is-flying-over-the-ocean-and-rocks.jpeg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Open Tabs - Fun Tab Opener Tool">
+    <meta name="twitter:description" content="Easily open multiple tabs at once with this tool.">
+    <meta name="twitter:image"
+        content="https://images.pexels.com/photos/28029253/pexels-photo-28029253/free-photo-of-a-bird-is-flying-over-the-ocean-and-rocks.jpeg">
+
+    <script>
+        function _open() {
+            let howmany = prompt('How many tabs do you want to open?', 1);
+
+            // Keep asking for valid input until the user enters a valid number or cancels
+            while (isNaN(howmany) || howmany === '' || howmany === null || Number(howmany) <= 0) {
+                howmany = prompt('Please enter a valid number greater than 0:', 1);
+            }
+
+            for (let i = 0; i < Number(howmany); i++) {
+                window.open('https://www.google.com/search?q=goole', '_blank');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="root">
+        <button type="button" class="click-btn" onclick="_open()">
+            Click to open tabs
+        </button>
+    </div>
+    <div class="footer">
+        <h2>Made with ❤️ by ©️ Rajdip</h2>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    html {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://images.pexels.com/photos/28029253/pexels-photo-28029253/free-photo-of-a-bird-is-flying-over-the-ocean-and-rocks.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: 100% 100%;
+        backdrop-filter: blur(3px);
+    }
+
+    .root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .click-btn {
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 14px 24px;
+        border: none;
+        transition: box-shadow 0.2s ease, transform 0.1s ease;
+        background: linear-gradient(to right, rgb(230, 30, 77), rgb(227, 28, 95), rgb(215, 4, 102));
+        color: #fff;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(255, 197, 197);
+        position: absolute;
+        bottom: 0px;
+    }
+</style>
